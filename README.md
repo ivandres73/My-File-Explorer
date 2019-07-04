@@ -10,6 +10,6 @@ Important note: to let some features work, you must _run as administrator._
 
 ### Download first release
 
-(Download)[https://sourceforge.net/projects/my-file-explorer/files/FileExplorer.exe/download]
+[Download](https://sourceforge.net/projects/my-file-explorer/files/FileExplorer.exe/download)
 
 Happy coding ! ! :nerd_face:
