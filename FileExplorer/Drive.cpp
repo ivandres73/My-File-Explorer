@@ -8,7 +8,9 @@ Drive::Drive()
 
 Drive::~Drive()
 {
-
+	delete(driveLetter);
+	delete(volumeName);
+	delete(driveType);
 }
 
 void Drive::getSystemDrives()

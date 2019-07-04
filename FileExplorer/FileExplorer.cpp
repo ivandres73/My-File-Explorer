@@ -306,7 +306,7 @@ BOOL CALLBACK DialogProcLink(HWND hDlg, UINT iMessage, WPARAM wParam, LPARAM lPa
 				CreateSymbolicLink(fullPathOutput, fullPathOrigin, 0);//0 for symlink to files
 				break;
 			case 3:
-				CreateSymbolicLink(fullPathOutput, fullPathOrigin, 1);//1 for symlink to files
+				CreateSymbolicLink(fullPathOutput, fullPathOrigin, 1);//1 for symlink to directories
 				break;
 			case 4:
 			{
@@ -369,7 +369,7 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 		switch (wmId)
 		{
 		case IDM_EXIT:
-			delete(drive);
+			delete drive;
 			DestroyWindow(hWnd);
 			break;
 		case IDM_CREATEFILE:
@@ -493,7 +493,6 @@ LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 			break;
 		case NM_RCLICK:
 			{
-				HMENU hMenu;
 				POINT cursor; // Getting the cursor position
 				GetCursorPos(&cursor);
 				if (copyActivate)
@@ -746,10 +745,10 @@ void convertWStringToCharPtr(_In_ std::wstring input, _Out_ char * outputString)
 
 bool findNameItem(vector<TCHAR*>g_nameFile, char *name)
 {
-	for (int i = 0; i < g_nameFile.size(); i++)
+	for (unsigned short i = 0; i < g_nameFile.size(); i++)
 	{
 		char * temp = new char[_tcslen((g_nameFile.at(i)))];
-		for (int j = 0; j < _tcslen((g_nameFile.at(i))); j++)
+		for (unsigned short j = 0; j < _tcslen((g_nameFile.at(i))); j++)
 		{
 			temp[j] = g_nameFile.at(i)[j];
 		}
