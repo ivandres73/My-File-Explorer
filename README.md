@@ -9,6 +9,7 @@ It was created using Visual Studio 2017 with no other tools or frameworks other 
 Important note: to let some features work, you must _run as administrator._
 
 ### Download first release
+![](https://a.fsdn.com/con/app/proj/my-file-explorer/screenshots/ExplorerScreenShot.png/max/max/1)
 
 [Download](https://sourceforge.net/projects/my-file-explorer/files/FileExplorer.exe/download)
 
